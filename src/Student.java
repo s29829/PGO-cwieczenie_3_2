@@ -32,25 +32,26 @@ public class Student {
     public Student() {
     }
 
-    public boolean addGrade (double grade) {
+    public boolean addGrade(double grade) {
         for (int i = 0; i < grades.length; i++) {
-            if (grades[i] == 0 ) {
+            if (grades[i] == 0) {
                 continue;
             } else {
                 grades[i] = grade;
 //                return true;
             }
-        } if (grades[grades.length-1] != 0) {
+        }
+        if (grades[grades.length - 1] != 0) {
             System.out.println("Student ma już maksymwalną liczbę ocen");
             return false;
-        } return true;
+        }
+        return true;
     }
 
     public boolean addGrades(double grade[]) {
         this.grades = grade;
         return true;
     }
-
 
 
     public double obliczSrednia() {

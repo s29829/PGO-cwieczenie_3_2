@@ -15,7 +15,8 @@ public class StudentGroup {
                 }
 
             }
-        } return true;
+        }
+        return true;
 
     }
 }
