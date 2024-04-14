@@ -1,13 +1,10 @@
-import java.lang.reflect.Array;
 import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
         double[] ocenyUczniaPrzyklad1 = new double[]{3, 5, 4.34, 3, 2.23, 3, 5.2, 4, 3, 2.23, 3, 5, 4, 3, 2.23, 3, 5, 4, 3, 2.23};
 
-        System.out.println("PGO - cwieczenie 3 2 ");
-        System.out.println("");
-
+        System.out.println("PGO - cwieczenie 3 2 \n");
 
         Student student01 = new Student("Andrzej", "Markowski", 78667, "amarkowski@stud.edu.pl", "Kopernika 7a");
 
@@ -19,9 +16,7 @@ public class Main {
         System.out.println("Przykład 2: Uczeń bez ocen (try/catch) IllegalArgumentException ");
         System.out.println("Imię ucznia: " + student01.fname + " Nazwisko ucznia: " + student01.lname + " Numer indeksu: " + student01.indexNumber);
         System.out.println("Oceny: " + Arrays.toString(student01.grades));
-        System.out.println("Średnia: " + student01.calculateAverage());
-        System.out.println("");
-
+        System.out.println("Średnia: " + student01.calculateAverage()+"\n");
 
 // Drugi student bez podania danych ale z dodanymi ocenami
         System.out.println("Przykład 3: Drugi student bez podania imienia i nazwiska ");
@@ -36,9 +31,7 @@ public class Main {
 
         System.out.println("Imię ucznia: " + student02.fname + " Nazwisko ucznia: " + student02.lname + " Numer indeksu: " + student02.indexNumber);
         System.out.println("Oceny: " + Arrays.toString(student02.grades));
-        System.out.println("Srednia: " + student02.calculateAverage());
-        System.out.println("");
-
+        System.out.println("Srednia: " + student02.calculateAverage()+"\n");
 
 // Drugi student podajemy dane studenta
         System.out.println("Przykład 4: Drugi student z danymi oraz ocenami ");
@@ -48,9 +41,7 @@ public class Main {
 
         System.out.println("Imię ucznia: " + student02.fname + " Nazwisko ucznia: " + student02.lname + " Numer indeksu: " + student02.indexNumber);
         System.out.println("Oceny: " + Arrays.toString(student02.grades));
-        System.out.println("Srednia: " + student02.calculateAverage());
-        System.out.println("");
-
+        System.out.println("Srednia: " + student02.calculateAverage()+"\n");
 
 // Tworzymy grupę studentów i dodajemy noweg studenta
         System.out.println("Przykład 5: Tworzenie grupy studentów i dodanie studenta 1 oraz studenta 2 ");
@@ -72,8 +63,7 @@ public class Main {
             System.out.println(student.calculateAverage());
 
         } catch (IllegalArgumentException e) {
-            System.out.println("Uwaga: Brak ocen!!!!! Proszę wprowadzić oceny aby możliwe było wystawienie ocen. ");
-            System.out.println("");
+            System.out.println("Uwaga: Brak ocen!!!!! Proszę wprowadzić oceny aby możliwe było wystawienie ocen. "+"\n");
         }
     }
 
