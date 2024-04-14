@@ -9,39 +9,25 @@ public class StudentGroup {
 
     public void addStudent(Student student) {
         if (countStudents < 15) {
-            System.out.println("OK "+countStudents);
+            for (int i = 0; i < countStudents; i++) {
+                if (studentsInGroup[i].fname.equals(student.fname) && studentsInGroup[i].indexNumber == student.indexNumber) {
+                    throw new IllegalStateException("Student\\ka " + student.fname + " jest już wpisany do tej grupy");
+                }
+            }
             studentsInGroup[countStudents] = student;
             countStudents++;
-            System.out.println("OK++ "+countStudents);
-            System.out.println(student);
-            System.out.println(studentsInGroup[countStudents-1].fname);
+
+            System.out.println("\n+++ Student\\ka " + student.fname );
+            System.out.println("   został\\a dodany do grupy: \"" + nazwa+"\"");
+            System.out.println("++++  Łączna ilość studentów w grupie: " + countStudents);
 
 
+        } else {
+            System.out.println("Maksymalna ilość studentów. Nie można dodać kolejnego " + student.fname + " is already in the group");
         }
-        System.out.println(studentsInGroup[countStudents-1].fname);
     }
 
 
-//    public void addNewStudentToGroup(Student newStudentInGroup) {
-//        System.out.println(this.studentsInGroup[0].fname +" / "+this.studentsInGroup[0].indexNumber);
-//
-//        if (countStudents > 15) {
-//            throw new IllegalStateException("Grupa: " + nazwa + " zawiera już maksymalną ");
-//        } else {
-//            System.out.println(this.studentsInGroup[0].fname +" / "+this.studentsInGroup[0].indexNumber);
-//            for (int i = 0; i < this.studentsInGroup.length; i++) {
-//                System.out.println("A:" +this.studentsInGroup[i].indexNumber+ " == "+ newStudentInGroup.indexNumber);
-////                for (int j = i; j < this.studentsInGroup.length; j++) {
-//                    if (this.studentsInGroup[i].indexNumber == newStudentInGroup.indexNumber) {
-//                        System.out.println("A:" +this.studentsInGroup[i].indexNumber+ " == "+ newStudentInGroup.indexNumber);
-//                        throw new IllegalStateException("Student o numerze: " + this.studentsInGroup[i].indexNumber + " już jest przypisany do tej grupy");
-//                    }
-////                }
-//            }
-//            this.studentsInGroup[countStudents] = newStudentInGroup;
-//
-//        }
-//    }
 }
 
 
